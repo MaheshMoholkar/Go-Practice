@@ -6,7 +6,8 @@ import (
 )
 
 func main() {
-	var color util.Color
-	var result = color.GetColor(2)
-	fmt.Println(result)
+	m := util.NewCustomMap[int, string]()
+	m.Insert(1, "one")
+	m.Insert(2, "two")
+	fmt.Println(m)
 }
