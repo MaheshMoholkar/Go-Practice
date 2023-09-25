@@ -6,8 +6,10 @@ import (
 )
 
 func main() {
-	m := util.NewCustomMap[int, string]()
-	m.Insert(1, "one")
-	m.Insert(2, "two")
-	fmt.Println(m)
+	character := &util.Character{HP: 100}
+	fmt.Println("Character HP:", character.HP)
+	fmt.Println(character)
+	fmt.Println(*character)
+	character.TakeDamage(10)
+	fmt.Println("Character HP:", character.HP)
 }
